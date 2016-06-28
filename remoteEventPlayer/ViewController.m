@@ -29,7 +29,7 @@
         NSLog(@"Failed to set up a session.");
     }
 
-//    AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, audioRouteChangeListenerCallback, nil);
+    //    AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, audioRouteChangeListenerCallback, nil);
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(outputDeviceChanged:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
 
@@ -46,8 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)playerBtn:(UIButton *)sender {
+- (IBAction)playerBtnEvnt:(UIButton *)sender {
     [_player play];
+}
+- (IBAction)stopBtnEvnt:(UIButton *)sender {
+    [_player stop];
 }
 
 - (BOOL)canBecomeFirstResponder {
@@ -97,7 +100,7 @@
     }
 }
 
-- (void)outputDeviceChanged:(NSNotification *)aNotification {
+- (void)outputDeviceChanged:(NSNotification *)notification {
     NSLog(@"耳机！");
 }
 

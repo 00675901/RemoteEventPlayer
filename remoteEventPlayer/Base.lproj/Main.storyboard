@@ -18,20 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99q-gE-djb">
-                                <rect key="frame" x="223" y="250" width="155" height="100"/>
+                                <rect key="frame" x="223" y="134" width="155" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="B1i-g5-obz"/>
                                     <constraint firstAttribute="height" constant="100" id="VPb-Ne-R5Z"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
-                                    <action selector="playerBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJl-xg-d7J"/>
+                                    <action selector="playerBtnEvnt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEP-cr-BUH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-W6-vZ8">
+                                <rect key="frame" x="222" y="250" width="155" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="3xE-fs-S8E"/>
+                                    <constraint firstAttribute="height" constant="100" id="gaK-H5-qnM"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopBtnEvnt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIv-Kg-Ie4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="99q-gE-djb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0HM-PC-f5J"/>
+                            <constraint firstItem="99q-gE-djb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-116" id="0HM-PC-f5J"/>
+                            <constraint firstItem="PIp-W6-vZ8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="20d-Nd-KK4"/>
+                            <constraint firstItem="PIp-W6-vZ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LY-KZ-5gv"/>
                             <constraint firstItem="99q-gE-djb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYa-CJ-7a8"/>
                         </constraints>
                     </view>
